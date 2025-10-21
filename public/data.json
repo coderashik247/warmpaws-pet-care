@@ -1,0 +1,74 @@
+[
+  {
+    "serviceId": 1,
+    "serviceName": "Winter Coat Fitting for Dogs",
+    "providerName": "PawCare Studio",
+    "providerEmail": "info@pawcare.com",
+    "price": 25,
+    "rating": 4.9,
+    "slotsAvailable": 4,
+    "description": "Custom coat fitting and warm outfit options to keep your dog comfortable in the cold.",
+    "image": "https://i.ibb.co.com/Tx6g7prt/unnamed.jpg",
+    "category": "Clothing"
+  },
+  {
+    "serviceId": 2,
+    "serviceName": "Cozy Grooming Session",
+    "providerName": "WarmPaws Groomers",
+    "providerEmail": "support@warmpaws.com",
+    "price": 40,
+    "rating": 4.8,
+    "slotsAvailable": 6,
+    "description": "Warm-water baths, gentle drying, and coat moisturizing for pets to stay clean and cozy during winter.",
+    "image": "https://i.ibb.co.com/YTkGgFH2/unnamed.jpg",
+    "category": "Grooming"
+  },
+  {
+    "serviceId": 3,
+    "serviceName": "Winter Health Checkup",
+    "providerName": "FrostVet Clinic",
+    "providerEmail": "contact@frostvet.com",
+    "price": 50,
+    "rating": 5.0,
+    "slotsAvailable": 3,
+    "description": "Full veterinary checkup focused on winter-related health concerns such as dry skin, chills, and low activity.",
+    "image": "https://i.ibb.co.com/60k8XGQH/unnamed.jpg",
+    "category": "Healthcare"
+  },
+  {
+    "serviceId": 4,
+    "serviceName": "Paw & Nose Protection Treatment",
+    "providerName": "SnowTail Pets",
+    "providerEmail": "hello@snowtail.com",
+    "price": 20,
+    "rating": 4.7,
+    "slotsAvailable": 8,
+    "description": "Organic balm application to protect your pet’s paws and nose from frostbite and dryness.",
+    "image": "https://i.ibb.co.com/PzF3ctq2/unnamed.jpg",
+    "category": "Care"
+  },
+  {
+    "serviceId": 5,
+    "serviceName": "Winter Boarding Stay",
+    "providerName": "CozyPet Haven",
+    "providerEmail": "stay@cozypethaven.com",
+    "price": 80,
+    "rating": 4.9,
+    "slotsAvailable": 5,
+    "description": "Warm, temperature-controlled boarding with daily walks, meals, and playtime for your pets during winter.",
+    "image": "https://i.ibb.co.com/0p0LCdPW/unnamed.jpg",
+    "category": "Boarding"
+  },
+  {
+    "serviceId": 6,
+    "serviceName": "Winter Walk & Exercise Session",
+    "providerName": "FurSteps Team",
+    "providerEmail": "walks@fursteps.com",
+    "price": 30,
+    "rating": 4.8,
+    "slotsAvailable": 10,
+    "description": "Guided outdoor winter walks with pet-safe gear and paw warmers to ensure a fun, safe exercise experience.",
+    "image": "https://i.ibb.co.com/XZmSdw1B/unnamed.jpg",
+    "category": "Outdoor"
+  }
+]
