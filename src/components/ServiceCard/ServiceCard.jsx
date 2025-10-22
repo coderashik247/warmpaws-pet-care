@@ -1,5 +1,4 @@
-import React from "react";
-import { MdOutlineArrowOutward } from "react-icons/md";
+import { Link } from "react-router";
 
 const ServiceCard = ({ data }) => {
   console.log(typeof data); //object
@@ -49,9 +48,9 @@ const ServiceCard = ({ data }) => {
                     </span>
                   </div>
                   <div className="flex justify-center items-center">
-                    <button className="px-5 py-2 bg-[#f8721f] rounded-lg font-semibold group-hover:cursor-pointer">
+                    <Link to={`/services/${pet.serviceId}`} className="px-5 py-2 bg-[#f8721f] rounded-lg font-semibold group-hover:cursor-pointer">
                       View Details
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>

@@ -1,11 +1,17 @@
-import React from 'react';
+import React from "react";
+import { useLoaderData } from "react-router";
+import Container from "../../Container/Container";
+import ServiceCard from "../../components/ServiceCard/ServiceCard";
 
 const Services = () => {
-    return (
-        <div>
-            <h2>Services Page</h2>
-        </div>
-    );
+  const data = useLoaderData();
+  return (
+    <>
+      <Container>
+        <ServiceCard data={data}></ServiceCard>
+      </Container>
+    </>
+  );
 };
 
 export default Services;

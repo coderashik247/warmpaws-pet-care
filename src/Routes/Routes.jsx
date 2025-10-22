@@ -3,6 +3,7 @@ import MainLayout from "../layouts/MainLayout";
 import Home from "../pages/Home/Home";
 import Services from "../pages/Services/Services";
 import MyProfile from "../pages/MyProfile/MyProfile";
+import ServiceDetails from "../pages/ServiceDetails/ServiceDetails";
 
 
 export const router = createBrowserRouter([
@@ -17,11 +18,17 @@ export const router = createBrowserRouter([
             },
             {
                 path:"/services",
-                element: <Services></Services>
+                element: <Services></Services>,
+                loader: () => fetch('/data.json')
             },
             {
                 path:"/my-profile",
                 element: <MyProfile></MyProfile>
+            },
+            {
+                path:"/services/:serviceId",
+                element:<ServiceDetails></ServiceDetails>,
+                loader: () => fetch('/data.json')
             }
         ]
     }
