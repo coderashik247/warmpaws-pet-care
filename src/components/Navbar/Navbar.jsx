@@ -36,7 +36,7 @@ const Navbar = () => {
         </div>
         <Link className="flex justify-center items-center">
           <img src={logo} className="h-12" alt="" />
-          <a className="pl-3 btn-ghost text-3xl font-bold fontBricolage">Warms Paws</a>
+          <p className="pl-3 btn-ghost text-3xl font-bold fontBricolage">Warms Paws</p>
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
@@ -47,7 +47,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <Link to="/" className="border text-xl font-semibold text-orange-500 px-3 flex justify-center items-center gap-2 py-1 rounded-lg"> <FaUserCircle size={30} color="black" /> Login</Link>
+        <Link to="/auth/login" className="border text-xl font-semibold text-orange-500 px-3 flex justify-center items-center gap-2 py-1 rounded-lg"> <FaUserCircle size={30} color="black" /> Login</Link>
       </div>
     </div>
   );
