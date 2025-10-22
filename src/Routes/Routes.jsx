@@ -4,6 +4,7 @@ import Home from "../pages/Home/Home";
 import Services from "../pages/Services/Services";
 import MyProfile from "../pages/MyProfile/MyProfile";
 
+
 export const router = createBrowserRouter([
     {
         path:"/",
@@ -11,7 +12,7 @@ export const router = createBrowserRouter([
         children:[
             {
                 path:"/",
-                element: <Home></Home>
+                element: <Home></Home>,
             },
             {
                 path:"/services",

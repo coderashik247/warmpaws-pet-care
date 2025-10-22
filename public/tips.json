@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Keep Pets Warm Indoors",
+    "image": "https://i.ibb.co/NnLLb6wD/1-pets.png",
+    "description": "Provide cozy bedding, blankets, and warm spots inside the house to help pets stay comfortable during cold days."
+  },
+  {
+    "id": 2,
+    "title": "Protect Paws from Ice & Snow",
+    "image": "https://i.ibb.co/pjnhGVDR/2-paws.png",
+    "description": "Apply paw balm or use pet booties to prevent cracking, frostbite, or irritation from salt and ice."
+  },
+  {
+    "id": 3,
+    "title": "Regular Grooming",
+    "image": "https://i.ibb.co/k6BGv9qd/3-grooming.png",
+    "description": "Maintain a clean, untangled coat to retain natural warmth; avoid shaving short in winter."
+  },
+  {
+    "id": 4,
+    "title": "Adjust Diet & Hydration",
+    "image": "https://i.ibb.co/tMFyQ6pX/4-hydration.png",
+    "description": "Ensure pets have enough calories and fresh water to maintain energy and hydration in cold weather."
+  },
+  {
+    "id": 5,
+    "title": "Limit Cold Outdoor Exposure",
+    "image": "https://i.ibb.co/DPyDWQMH/5-outdoor.png",
+    "description": "Shorten walks in extremely cold weather and provide winter clothing like jackets or sweaters."
+  },
+  {
+    "id": 6,
+    "title": "Check for Winter Health Issues",
+    "image": "https://i.ibb.co/mrVTLzLY/6-medical.png",
+    "description": "Monitor for signs of hypothermia, frostbite, or arthritis flare-ups and consult a vet when necessary."
+  }
+]

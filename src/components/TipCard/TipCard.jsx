@@ -1,0 +1,40 @@
+import React from 'react';
+
+const TipCard = ({tip}) => {
+return (
+  <div
+    className="w-full mx-auto animate__animated animate__fadeInUp hover:scale-105 transition-transform duration-500"
+    data-aos="zoom-in"
+  >
+    <div className="group rounded-2xl shadow-lg bg-base-200 p-6 transition-all duration-500 hover:bg-[#F6F2ED]">
+      {/* Icon */}
+      <div className="flex justify-center items-center bg-white rounded-full w-40 h-40 mx-auto mb-4">
+        <img
+          className="transition-transform duration-700 group-hover:rotate-360 w-30 h-30 "
+          src={tip.image}
+          alt=""
+        />
+      </div>
+
+      {/* Title */}
+      <h2 className="text-xl font-bold text-center mb-2  transition-colors duration-500">
+        {tip.title}
+      </h2>
+
+      {/* Description */}
+      <p className="text-center text-gray-500 text-xl mb-4  transition-colors duration-500">
+        {tip.description}
+      </p>
+
+      {/* Button */}
+      <div className="mt-4 text-center">
+        <button className="btn w-full bg-[#f8721fc3] text-white hover:bg-orange-600 hover:text-white rounded-full px-6 transition-all duration-500">
+          Book Now
+        </button>
+      </div>
+    </div>
+  </div>
+);
+};
+
+export default TipCard;
