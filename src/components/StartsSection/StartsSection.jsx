@@ -35,7 +35,7 @@ const StatsSection = () => {
             className="flex flex-col items-center justify-center hover:scale-105 transition-transform duration-300"
           >
             <div className="text-[#F8721F]">{item.icon}</div>
-            <h3 className="text-5xl text-[#F8721F] font-bold mt-2">
+            <h3 className="text-5xl text-[#F8721F] font-bold mt-2 ">
               <CountUp
                 start={0}
                 end={item.number}
