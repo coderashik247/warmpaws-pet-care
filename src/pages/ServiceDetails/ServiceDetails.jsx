@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 import { BiSolidCategoryAlt, BiSolidRename } from "react-icons/bi";
 import { FaCheckToSlot } from "react-icons/fa6";
 import { MdOutlineMailLock } from "react-icons/md";
@@ -15,6 +16,27 @@ const ServiceDetails = () => {
     const singlePet = petsData.find((pet) => pet.serviceId == serviceId);
     setPet(singlePet);
   }, [serviceId, petsData]);
+  const handleBookNow = (event) => {
+    event.preventDefault();
+
+    const form = event.target;
+    const name = form.name.value;
+    const email = form.email.value;
+
+    toast.success(
+      <div>
+        <p>
+          <strong>Name:</strong> {name}
+        </p>
+        <p>
+          <strong>Email:</strong> {email}
+        </p>
+        <p>is booking now</p>
+      </div>,
+      { duration: 3000 }
+    );
+    event.target.reset();
+  };
   return (
     <div>
       <section className="p-6 dark:bg-gray-100 dark:text-gray-800">
@@ -101,8 +123,7 @@ const ServiceDetails = () => {
             Paw-sitively Book!
           </h2>
           <form
-            noValidate=""
-            action=""
+            onSubmit={handleBookNow}
             className="self-stretch space-y-3 w-3/6 mx-auto"
           >
             <div>
@@ -110,25 +131,25 @@ const ServiceDetails = () => {
                 Your name
               </label>
               <input
-                id="name"
+              required
+                name="name"
                 type="text"
                 placeholder="Your name"
                 className="w-full py-3 px-2 border-2  rounded-md focus:ring focus:dark:ring-violet-600 dark:border-gray-300"
               />
             </div>
             <div>
-              <label htmlFor="lastname" className="text-sm sr-only">
-                Email address
-              </label>
+              <label className="text-sm sr-only">Email address</label>
               <input
-                id="lastname"
-                type="text"
+              required
+                name="email"
+                type="email"
                 placeholder="Email address"
                 className="w-full rounded-md focus:ring border-2 py-3 px-2 focus:dark:ring-violet-600 dark:border-gray-300"
               />
             </div>
             <button
-              type="button"
+              type="submit"
               className="w-full py-3 font-semibold rounded dark:bg-[#F8721F] dark:text-gray-50"
             >
               Book Now

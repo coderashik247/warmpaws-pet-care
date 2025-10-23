@@ -7,6 +7,8 @@ import ServiceDetails from "../pages/ServiceDetails/ServiceDetails";
 import AuthLayout from "../layouts/AuthLayout";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
+import PrivateRoute from "../contexts/PrivateRoute";
+import ForgotPassword from "../pages/ForgetPassword/ForgetPassword";
 
 export const router = createBrowserRouter([
   {
@@ -29,7 +31,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/services/:serviceId",
-        element: <ServiceDetails></ServiceDetails>,
+        element: (
+          <PrivateRoute>
+            <ServiceDetails></ServiceDetails>
+          </PrivateRoute>
+        ),
         loader: () => fetch("/data.json"),
       },
     ],
@@ -44,8 +50,12 @@ export const router = createBrowserRouter([
       },
       {
         path: "/auth/register",
-        element: <Register></Register>
-      }
+        element: <Register></Register>,
+      },
+      {
+        path: "/auth/forgot-password",
+        element: <ForgotPassword></ForgotPassword>,
+      },
     ],
   },
 ]);
