@@ -17,12 +17,13 @@ const WinterCare = () => {
     AOS.init({ duration: 1000 });
   }, []);
   return (
-    <div className="py-10 px-5">
-      <h1 className="text-5xl fontBricolage font-bold text-center mb-10 animate__animated animate__backInDown">
-        Winter Care Tips for <span className="text-[#F8721F] fontPacifico">Pets</span>
+    <div className="py-10 px-5" data-aos="fade-down" data-aos-duration="1000">
+      <h1 className="text-2xl md:text-5xl fontBricolage font-bold text-center mb-10 animate__animated animate__backInDown">
+        Winter Care Tips for{" "}
+        <span className="text-[#F8721F] fontPacifico">Pets</span>
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
-        {tips.map(tip => (
+        {tips.map((tip) => (
           <TipCard key={tip.id} tip={tip} />
         ))}
       </div>

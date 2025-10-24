@@ -4,9 +4,9 @@ const ExpertCard = () => {
   return (
     <div>
         <div >
-            <h2 className="text-5xl fontBricolage font-bold text-center mb-10 animate__animated animate__backInDown mt-10">Meet Our  <span className="text-[#F8721F] fontPacifico">Pets</span> Expert</h2>
+            <h2 className="text-xl md:text-5xl fontBricolage font-bold text-center mb-10 animate__animated animate__backInDown mt-10">Meet Our  <span className="text-[#F8721F] fontPacifico">Pets</span> Expert</h2>
         </div>
-      <div className="grid grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
         {/* expert 1 */}
         <div className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 p-3 flex flex-col items-center relative">
           {/* Image */}

@@ -12,11 +12,11 @@ const Footer = () => {
         {/* Left Section */}
         <div>
           <div className="flex items-center gap-2 mb-4">
-            <img src={logo} alt="Warm Paws Logo" className="w-[120px]" />
-            <h2 className="text-2xl font-bold fontBricolage">Warm Paws</h2>
-            <span className="text-xs bg-orange-500 text-white rounded-md px-2 py-1 ml-1">Pet Care & Shop</span>
+            <img src={logo} alt="Warm Paws Logo" className="w-[60px] md:w-[120px]" />
+            <h2 className="text-base md:text-2xl font-bold fontBricolage">Warm Paws</h2>
+            <span className="text-[10px] md:text-xs bg-orange-500 text-white rounded-md px-2 py-1 ml-1">Pet Care & Shop</span>
           </div>
-          <p className="text-sm leading-relaxed mb-4 ">
+          <p className="text-[10px] md:text-sm text-center md:text-left leading-relaxed mb-4 ">
             Once checked in, your dog joins a group of compatible friends for supervised playtime. We organize activities…
           </p>
           <div className="flex gap-4 text-xl">
@@ -31,22 +31,22 @@ const Footer = () => {
         {/* Middle Section */}
         <div className="flex flex-col gap-6">
           <div>
-            <p className="font-bold">HELP FOR CALL</p>
-            <p className="text-lg font-semibold">+017-98765-433</p>
+            <p className="text-sm md:text-lg font-bold">HELP FOR CALL</p>
+            <p className="text-sm md:text-lg font-medium md:font-semibold">+017-98765-433</p>
           </div>
           <div>
-            <p className="font-bold">OUR ADDRESS</p>
-            <p className="text-lg font-semibold">Dhaka, Bangladesh</p>
+            <p className="text-sm md:text-lg font-bold">OUR ADDRESS</p>
+            <p className="text-sm md:text-lg font-medium md:font-semibold">Dhaka, Bangladesh</p>
           </div>
           <div>
-            <p className="font-bold">WHATSAPP</p>
-            <p className="text-lg font-semibold">+017-98765-433</p>
+            <p className="text-sm md:text-lg font-bold">WHATSAPP</p>
+            <p className="text-sm md:text-lg font-medium md:font-semibold">+017-98765-433</p>
           </div>
         </div>
 
         {/* Right Section */}
         <div>
-          <p className="font-bold mb-4">Subscribe! New subscribers get 20% off!</p>
+          <p className="font-medium md:font-bold mb-4">Subscribe! New subscribers get 20% off!</p>
           <div className="flex items-center gap-2 mb-6">
             <input
               type="email"
@@ -68,7 +68,7 @@ const Footer = () => {
         <p>
           Copyright 2025 <span className="text-orange-500">Warm Paws</span>. All Rights Reserved.
         </p>
-        <div className="flex justify-center gap-4 mt-2 text-sm">
+        <div className="flex justify-center gap-4 mt-2 text-[10px] md:text-sm">
           <Link to="/terms">Terms & Conditions</Link>
           <Link to="/privacy">Privacy Policy</Link>
           <Link to="/refund">Refund Policy</Link>

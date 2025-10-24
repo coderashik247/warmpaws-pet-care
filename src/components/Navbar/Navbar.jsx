@@ -70,7 +70,7 @@ const Navbar = () => {
         </div>
         <Link className="flex justify-center items-center">
           <img src={logo} className="h-12" alt="" />
-          <p className="pl-3 btn-ghost text-3xl font-bold fontBricolage">
+          <p className="pl-3 btn-ghost text-lg md:text-3xl font-bold fontBricolage">
             Warms Paws
           </p>
         </Link>
