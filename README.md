@@ -1,16 +1,34 @@
-# React + Vite
+# WarmPaws — Pet Care in Winter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Project category:** Assignment-09_category_rose  
+**Live URL:** https://your-live-url.example.com  
 
-Currently, two official plugins are available:
+## Purpose
+WarmPaws is a cozy winter companion platform for pet owners that centralizes winter-specific pet services, clothing, grooming, vet tips, and booking support. It helps pet owners keep their furry friends warm, healthy, and safe during the cold season.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Key Features
+- Responsive single-page React application (Vite + React).
+- Firebase Authentication (Email/Password + Google).
+- Protected Service Details route — only accessible for authenticated users.
+- Services loaded from a local JSON file (6+ winter services).
+- Swiper hero slider showcasing winter-themed pet images.
+- Popular services listing cards with image, price, rating, and "View Details" button.
+- Book Service form with success toast (client-side only).
+- My Profile page with user info and an Update Profile action (challenge).
+- Extra sections: Winter Care Tips & Meet Our Expert Vets.
+- Toast notifications for success/errors (react-hot-toast).
+- Animations via AOS/Swiper/Framer Motion as applicable.
+- Deployed to Netlify 
 
-## React Compiler
+## Packages Used
+- react
+- react-dom
+- react-router-dom
+- firebase
+- swiper
+- react-hot-toast
+- aos
+- react-icons
+- axios (optional, for fetching JSON)
+- tailwindcss (or your CSS framework of choice)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
