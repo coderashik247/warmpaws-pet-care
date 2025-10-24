@@ -2,8 +2,10 @@ import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../../contexts/AuthContext";
 import toast from "react-hot-toast";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
+  const [showPassword,setShowPassword] = useState(false);
   const { signInUser, googleSignIn } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
@@ -38,6 +40,11 @@ const Login = () => {
       .catch((error) => toast.error(error.message));
   };
 
+    const handleTogglePasswordShow = (event) =>{
+    event.preventDefault();
+    setShowPassword(!showPassword);
+  }
+
   return (
     <div className="flex justify-center items-center min-h-[450px]">
       <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
@@ -57,12 +64,20 @@ const Login = () => {
             />
 
             <label className="label">Password</label>
-            <input
-              type="password"
-              name="password"
-              className="input"
-              placeholder="Password"
-            />
+            <div className="relative">
+              <input
+                type={showPassword ? "text" : "password"}
+                name="password"
+                className="input"
+                placeholder="Password"
+              />
+              <button
+                onClick={handleTogglePasswordShow}
+                className="btn btn-xs top-2 right-5 absolute"
+              >
+                {showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}
+              </button>
+            </div>
 
             {/* ✅ Forgot Password */}
             <div className="text-left mt-2">
