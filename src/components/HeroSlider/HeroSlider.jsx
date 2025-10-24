@@ -28,7 +28,7 @@ const slides = [
 
 const HeroSlider = () => {
   return (
-    <div className="w-full h-[80-vh] rounded-lg overflow-hidden relative z-0">
+    <div className="w-full h-[80-vh] md:px-2 rounded-lg overflow-hidden relative z-0">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -50,7 +50,7 @@ const HeroSlider = () => {
               <div className="hero-overlay bg-linear-to-t from-[#F9E9E0]/80 via-[#FBB78D]/40 to-transparent"></div>
               <div className="hero-content text-center text-neutral-content">
                 <div className="">
-                  <h1 className="mb-5 text-3xl md:text-7xl font-bold text-white drop-shadow-lg fontBricolage">
+                  <h1 className="mb-5 text-3xl md:text-6xl 2xl:text-7xl font-bold text-white drop-shadow-lg fontBricolage">
                     {slide.title}
                   </h1>
                   <p className="mb-6 text-lg text-gray-100">

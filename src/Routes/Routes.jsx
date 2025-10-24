@@ -9,6 +9,7 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import PrivateRoute from "../contexts/PrivateRoute";
 import ForgotPassword from "../pages/ForgetPassword/ForgetPassword";
+import Loading from "../components/Loading/Loading";
 
 export const router = createBrowserRouter([
   {
@@ -19,11 +20,13 @@ export const router = createBrowserRouter([
         path: "/",
         element: <Home></Home>,
         loader: () => fetch("/data.json"),
+        hydrateFallbackElement:<Loading></Loading>
       },
       {
         path: "/services",
         element: <Services></Services>,
         loader: () => fetch("/data.json"),
+        hydrateFallbackElement:<Loading></Loading>
       },
       {
         path: "/my-profile",
@@ -37,6 +40,7 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: () => fetch("/data.json"),
+        hydrateFallbackElement:<Loading></Loading>
       },
     ],
   },

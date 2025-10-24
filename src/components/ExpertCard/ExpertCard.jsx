@@ -2,7 +2,7 @@ import { FaShareNodes } from "react-icons/fa6";
 
 const ExpertCard = () => {
   return (
-    <div>
+    <div className="md:px-2">
         <div >
             <h2 className="text-xl md:text-5xl fontBricolage font-bold text-center mb-10 animate__animated animate__backInDown mt-10">Meet Our  <span className="text-[#F8721F] fontPacifico">Pets</span> Expert</h2>
         </div>
@@ -14,7 +14,7 @@ const ExpertCard = () => {
             <img
               src="https://i.ibb.co/23ZKfkt3/photo-1615592704797-3f3e0498b958.jpg" // replace with your image URL
               alt="Profile"
-              className="rounded-xl w-full h-[400px] object-cover transform transition-transform duration-500 hover:scale-95"
+              className="rounded-xl w-full h-[300px] md:h-[350px] 2xl:h-[400px] object-cover transform transition-transform duration-500 hover:scale-95"
             />
 
             {/* Rating badge */}
@@ -43,7 +43,7 @@ const ExpertCard = () => {
             <img
               src="https://i.ibb.co/yF3Z0Dz8/photo-1596058939740-516d0d71f3d4.jpg"
               alt="Profile"
-              className="rounded-xl w-full h-[400px] object-cover transform transition-transform duration-500 hover:scale-95"
+              className="rounded-xl w-full h-[300px] md:h-[350px] 2xl:h-[400px] object-cover transform transition-transform duration-500 hover:scale-95"
             />
 
             {/* Rating badge */}
@@ -72,7 +72,7 @@ const ExpertCard = () => {
             <img
               src="https://i.ibb.co/zHNChXyF/photo-1619451683243-b629e920805d.jpg"
               alt="Profile"
-              className="rounded-xl w-full h-[400px] object-cover transform transition-transform duration-500 hover:scale-95"
+              className="rounded-xl w-full h-[300px] md:h-[350px] 2xl:h-[400px] object-cover transform transition-transform duration-500 hover:scale-95"
             />
 
             {/* Rating badge */}
@@ -101,7 +101,7 @@ const ExpertCard = () => {
             <img
               src="https://i.ibb.co/S4dR5d4g/photo-1712804671163-15727f817c89.jpg"
               alt="Profile"
-              className="rounded-xl w-full h-[400px] object-cover transform transition-transform duration-500 hover:scale-95"
+              className="rounded-xl w-full h-[300px] md:h-[350px] 2xl:h-[400px] object-cover transform transition-transform duration-500 hover:scale-95"
             />
 
             {/* Rating badge */}

@@ -8,9 +8,9 @@ return (
   >
     <div className="group h-full rounded-2xl shadow-lg bg-base-200 p-6 transition-all duration-500 hover:bg-[#F6F2ED] flex flex-col justify-between object-cover">
       {/* Icon */}
-      <div className="flex justify-center items-center bg-white rounded-full w-28 md:w-40 h-28 md:h-40 mx-auto mb-4">
+      <div className="flex justify-center items-center bg-white rounded-full w-28 md:w-32 2xl:w-40 h-28 md:h-32 2xl:h-40 mx-auto mb-4">
         <img
-          className="transition-transform duration-700 group-hover:rotate-360 w-20 md:w-30 h-20 md:h-30 "
+          className="transition-transform duration-700 group-hover:rotate-360 w-20 md:w-24 2xl:w-30 h-20 md:h-24 2xl:h-30"
           src={tip.image}
           alt=""
         />
@@ -22,7 +22,7 @@ return (
       </h2>
 
       {/* Description */}
-      <p className="text-center text-gray-500 text-sm  md:text-lg mb-4  transition-colors duration-500">
+      <p className="text-center text-gray-500 text-sm md:text-base 2xl:text-lg mb-4  transition-colors duration-500">
         {tip.description}
       </p>
 

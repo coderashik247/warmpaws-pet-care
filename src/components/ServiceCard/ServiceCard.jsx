@@ -3,7 +3,7 @@ import { Link } from "react-router";
 const ServiceCard = ({ data }) => {
   console.log(typeof data); //object
   return (
-    <div className="px-2 md:px-0">
+    <div className="px-2 :px-0">
       <h2 className="text-3xl md:text-6xl fontBricolage font-bold text-center mb-3 md:mb-10 animate__animated animate__backInDown mt-10">
         {" "}
         <span className="text-[#F8721F] fontPacifico">Pets</span> Winter Care
@@ -22,9 +22,9 @@ const ServiceCard = ({ data }) => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {data.map((pet) => {
           return (
-            <>
+            <div key={pet.serviceId}>
               <div
-                className="relative h-[400px] md:h-[650px] rounded-3xl overflow-hidden shadow-md group "
+                className="relative h-[390px] md:h-[470px] 2xl:h-[550px] rounded-3xl overflow-hidden shadow-md group "
                 data-aos="fade-up"
                 data-aos-duration="1000"
               >
@@ -43,10 +43,10 @@ const ServiceCard = ({ data }) => {
                   className="absolute bottom-6 left-6 right-6 text-white p-2.5 transition-transform duration-500 ease-in-out
                 group-hover:-translate-y-5 group-hover:bg-stone-50 group-hover:rounded-xl "
                 >
-                  <h3 className="text-xl md:text-3xl font-semibold mb-2 fontBricolage group-hover:text-gray-600">
+                  <h3 className="text-xl md:text-2xl 2xl:text-3xl font-semibold mb-2 fontBricolage group-hover:text-gray-600">
                     {pet.serviceName}
                   </h3>
-                  <p className="text-sm md:text-base text-gray-200 group-hover:text-gray-400 leading-snug mb-3">
+                  <p className="text-sm md:text-[15px] md:text-base text-gray-200 group-hover:text-gray-400 leading-snug mb-3">
                     {pet.description}
                   </p>
                   <div className="flex justify-between">
@@ -57,7 +57,7 @@ const ServiceCard = ({ data }) => {
                       Price - {pet.price}{" "}
                     </span>
                   </div>
-                  <div className="flex justify-center items-center mt-2 md:mt-0">
+                  <div className="flex justify-center items-center mt-2 md:mt-3">
                     <Link
                       to={`/services/${pet.serviceId}`}
                       className="px-3 md:px-5 py-1 md:py-2 bg-[#f8721f] rounded-lg font-semibold group-hover:cursor-pointer"
@@ -67,7 +67,7 @@ const ServiceCard = ({ data }) => {
                   </div>
                 </div>
               </div>
-            </>
+            </div>
           );
         })}
       </div>

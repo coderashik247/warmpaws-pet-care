@@ -5,6 +5,7 @@ import { FaCheckToSlot } from "react-icons/fa6";
 import { MdOutlineMailLock } from "react-icons/md";
 import { RiArrowGoBackLine } from "react-icons/ri";
 import { useLoaderData, useNavigate, useParams } from "react-router";
+import Loading from '../../components/Loading/Loading';
 
 const ServiceDetails = () => {
   const { serviceId } = useParams();
@@ -37,11 +38,15 @@ const ServiceDetails = () => {
     );
     event.target.reset();
   };
+
+  if (!pet || Object.keys(pet).length === 0) {
+  return <Loading></Loading>
+}
   return (
     <div>
       <section className="p-6 dark:bg-gray-100 dark:text-gray-800">
         <div className="container grid gap-6 mx-auto text-center grid-cols-1 lg:grid-cols-2 xl:grid-cols-5">
-          <div className="w-full px-6 pt-16 rounded-md sm:px-12 md:px-16 xl:col-span-2 dark:bg-gray-50">
+          <div className="w-full px-6 pt-16 rounded-md sm:px-12 md:px-12 xl:col-span-2 dark:bg-gray-50">
             <span
               className="block mb-2 text-sm md:text-lg text-[#F8721F] animate__animated animate__rubberBand"
               style={{ animationDuration: "5s" }}
@@ -80,18 +85,18 @@ const ServiceDetails = () => {
               </span>
             </div>
             <div>
-              <section className="p-6 my-6 dark:bg-[#f8721f29] dark:text-gray-800 rounded-xl">
-                <div className="container md:flex space-y-2 md:space-y-0 justify-between gap-6">
+              <section className="p-3 2xl:p-6 my-6 dark:bg-[#f8721f29] dark:text-gray-800 rounded-xl">
+                <div className="container md:flex space-y-2 md:space-y-0 justify-between gap-1 2xl:gap-6">
                   <div className="flex p-4 space-x-4 rounded-lg md:space-x-6 dark:bg-gray-50 dark:text-gray-800">
                     <div className="flex justify-center p-2 align-middle rounded-lg sm:p-4 bg-[#F8721F]">
-                      <FaCheckToSlot md:size={25} color="white" />
+                      <FaCheckToSlot  md:size={25} color="white" />
                     </div>
                     <div className="flex flex-col justify-center align-middle">
                       <p className=" md:text-xl font-semibold leading-none">
                         {" "}
                         {pet.slotsAvailable}{" "}
                       </p>
-                      <p className="capitalize text-[10px] md:text-sm">Available</p>
+                      <p className="capitalize text-[10px] 2xl:text-base">Available</p>
                     </div>
                   </div>
                   <div className="flex p-4 space-x-4 rounded-lg md:space-x-6 dark:bg-gray-50 dark:text-gray-800">
@@ -99,10 +104,10 @@ const ServiceDetails = () => {
                       <BiSolidCategoryAlt md:size={25} color="white" />
                     </div>
                     <div className="flex flex-col justify-center align-middle">
-                      <p className="md:text-xl font-semibold leading-none">
+                      <p className="2xl:text-xl font-semibold leading-none">
                         {pet.category}
                       </p>
-                      <p className="capitalize text-[10px] md:text-sm">Category</p>
+                      <p className="capitalize text-[10px] 2xl:text-sm">Category</p>
                     </div>
                   </div>
                 </div>
