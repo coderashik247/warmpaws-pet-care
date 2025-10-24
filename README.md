@@ -1,7 +1,7 @@
 # WarmPaws — Pet Care in Winter
 
 **Project category:** Assignment-09_category_rose  
-**Live URL:** https://your-live-url.example.com  
+**Live URL:**  
 
 ## Purpose
 WarmPaws is a cozy winter companion platform for pet owners that centralizes winter-specific pet services, clothing, grooming, vet tips, and booking support. It helps pet owners keep their furry friends warm, healthy, and safe during the cold season.
