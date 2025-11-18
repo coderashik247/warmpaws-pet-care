@@ -12,7 +12,6 @@ import AuthProvider from "./contexts/AuthProvider";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-// এখানে useEffect লাগবে না ❌
 AOS.init({
   duration: 1000,
   once: true,

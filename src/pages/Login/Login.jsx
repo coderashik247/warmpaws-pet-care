@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
-  const [showPassword,setShowPassword] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
   const { signInUser, googleSignIn } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
@@ -23,7 +23,8 @@ const Login = () => {
         console.log(user);
         toast.success("You’re in! Let’s take care of some paws!");
         event.target.reset();
-        navigate(location.state ? location.state : "/");
+        const redirectPath = location.state?.from || "/";
+        navigate(redirectPath, { replace: true });
       })
       .catch((error) => {
         toast.error(error.message);
@@ -35,15 +36,18 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         toast.success(`Welcome, ${user.displayName || "Friend"} `);
-        navigate("/"); 
+        // // navigate(location.state ? location.state : "/");
+        // navigate("/");
+        const redirectPath = location.state?.from || "/";
+        navigate(redirectPath, { replace: true });
       })
       .catch((error) => toast.error(error.message));
   };
 
-    const handleTogglePasswordShow = (event) =>{
+  const handleTogglePasswordShow = (event) => {
     event.preventDefault();
     setShowPassword(!showPassword);
-  }
+  };
 
   return (
     <div className="flex justify-center items-center min-h-[450px]">
@@ -105,8 +109,10 @@ const Login = () => {
           </p>
         </form>
 
-        <button onClick={handleGoogleLogin}
-          className="mx-6 mb-3 btn border-2 border-[#F8721F] text-[#F8721F] hover:bg-[#F8721F] hover:text-white font-semibold"> 
+        <button
+          onClick={handleGoogleLogin}
+          className="mx-6 mb-3 btn border-2 border-[#F8721F] text-[#F8721F] hover:bg-[#F8721F] hover:text-white font-semibold"
+        >
           <svg
             aria-label="Google logo"
             width="16"

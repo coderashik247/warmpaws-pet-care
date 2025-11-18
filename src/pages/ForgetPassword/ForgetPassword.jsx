@@ -1,12 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,  useContext } from "react";
 
 import toast from "react-hot-toast";
 import { useLocation, useNavigate } from "react-router";
+import { AuthContext } from "../../contexts/AuthContext";
+
 
 const ForgotPassword = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [email, setEmail] = useState("");
+  const {passwordReset} = useContext(AuthContext);
 
   // 📨 Extract email from query parameter
   useEffect(() => {
@@ -23,12 +26,15 @@ const ForgotPassword = () => {
       return;
     }
 
-    // Normally you'd call Firebase sendPasswordResetEmail(email)
-    toast.success("Password reset email sent! Redirecting to Gmail...");
-    setTimeout(() => {
-      window.open("https://mail.google.com", "_blank");
-      navigate("/auth/login");
-    }, 1500);
+    passwordReset(email)
+    .then(() => {
+      toast.success("Password reset email sent!");
+      setTimeout(() => {
+        window.open("https://mail.google.com", "_blank");
+        navigate("/auth/login");
+      }, 1500);
+    })
+    .catch(err => toast.error(err.message));
   };
 
   return (
