@@ -53,6 +53,7 @@ WarmPaws Pet Care allows users to:
     "tailwindcss": "^4.1.15"
   }
 }
+```
 
 ### How to Run This Project Locally
 1. Clone:
